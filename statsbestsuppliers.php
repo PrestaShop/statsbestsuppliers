@@ -42,7 +42,7 @@ class statsbestsuppliers extends ModuleGrid
     {
         $this->name = 'statsbestsuppliers';
         $this->tab = 'analytics_stats';
-        $this->version = '1.4.0';
+        $this->version = '2.0.0';
         $this->author = 'PrestaShop';
         $this->need_instance = 0;
 
@@ -50,33 +50,33 @@ class statsbestsuppliers extends ModuleGrid
 
         $this->default_sort_column = 'sales';
         $this->default_sort_direction = 'DESC';
-        $this->empty_message = $this->l('Empty record set returned');
-        $this->paging_message = sprintf($this->l('Displaying %1$s of %2$s'), '{0} - {1}', '{2}');
+        $this->empty_message = $this->trans('Empty recordset returned', array(), 'Admin.Notifications.Info');
+        $this->paging_message = $this->trans('Displaying %1$s of %2$s', array('{0} - {1}', '{2}'), 'Admin.Global');
 
         $this->columns = array(
             array(
                 'id' => 'name',
-                'header' => $this->l('Name'),
+                'header' => $this->trans('Name', array(), 'Admin.Global'),
                 'dataIndex' => 'name',
                 'align' => 'center'
             ),
             array(
                 'id' => 'quantity',
-                'header' => $this->l('Quantity sold'),
+                'header' => $this->trans('Quantity sold', array(), 'Admin.Global'),
                 'dataIndex' => 'quantity',
                 'align' => 'center'
             ),
             array(
                 'id' => 'sales',
-                'header' => $this->l('Total paid'),
+                'header' => $this->trans('Total paid', array(), 'Modules.Statsbestsuppliers.Admin'),
                 'dataIndex' => 'sales',
                 'align' => 'center'
             )
         );
 
-        $this->displayName = $this->l('Best suppliers');
-        $this->description = $this->l('Adds a list of the best suppliers to the Stats dashboard.');
-        $this->ps_versions_compliancy = array('min' => '1.6', 'max' => _PS_VERSION_);
+        $this->displayName = $this->trans('Best suppliers', array(), 'Modules.Statsbestsuppliers.Admin');
+        $this->description = $this->trans('Adds a list of the best suppliers to the Stats dashboard.', array(), 'Modules.Statsbestsuppliers.Admin');
+        $this->ps_versions_compliancy = array('min' => '1.7.0.0', 'max' => _PS_VERSION_);
     }
 
     public function install()
@@ -105,7 +105,7 @@ class statsbestsuppliers extends ModuleGrid
 			</div>
 			'.$this->engine($engine_params).'
 			<a class="btn btn-default export-csv" href="'.Tools::safeOutput($_SERVER['REQUEST_URI'].'&export=1').'">
-				<i class="icon-cloud-upload"></i> '.$this->l('CSV Export').'
+				<i class="icon-cloud-upload"></i> '.$this->trans('CSV Export', array(), 'Admin.Global').'
 			</a>';
         return $this->html;
     }
