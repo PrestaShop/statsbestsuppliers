@@ -2,7 +2,7 @@
   "name": "prestashop/statsbestsuppliers",
   "description": "PrestaShop module statsbestsuppliers",
   "homepage": "https://github.com/PrestaShop/statsbestsuppliers",
-  "license": "AFL - Academic Free License (AFL 3.0)",
+  "license": ["AFL-3.0"],
   "authors": [
     {
       "name": "PrestaShop SA",
