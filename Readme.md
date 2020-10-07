@@ -2,7 +2,7 @@
 
 ## About
 
-Adds a list of the best suppliers to the Stats dashboard.
+Enrich the ‘Stats’ section of your back office, add a list of the best suppliers to the dashboard.
 
 ## Reporting issues
 
