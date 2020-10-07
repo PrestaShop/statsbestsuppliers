@@ -75,7 +75,7 @@ class statsbestsuppliers extends ModuleGrid
         );
 
         $this->displayName = $this->trans('Best suppliers', array(), 'Modules.Statsbestsuppliers.Admin');
-        $this->description = $this->trans('Adds a list of the best suppliers to the Stats dashboard.', array(), 'Modules.Statsbestsuppliers.Admin');
+        $this->description = $this->trans('Enrich the ‘Stats’ section of your back office, add a list of the best suppliers to the dashboard.', array(), 'Modules.Statsbestsuppliers.Admin');
         $this->ps_versions_compliancy = array('min' => '1.7.1.0', 'max' => _PS_VERSION_);
     }
 
