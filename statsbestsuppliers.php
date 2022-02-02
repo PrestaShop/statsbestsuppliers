@@ -125,7 +125,7 @@ class statsbestsuppliers extends ModuleGrid
 					AND o.valid = 1
 					AND s.id_supplier IS NOT NULL';
 
-        return Db::getInstance(_PS_USE_SQL_SLAVE_)->getValue($sql);
+        return (int) Db::getInstance((bool) _PS_USE_SQL_SLAVE_)->getValue($sql);
     }
 
     public function getData()
@@ -152,6 +152,6 @@ class statsbestsuppliers extends ModuleGrid
         if (($this->_start === 0 || Validate::IsUnsignedInt($this->_start)) && Validate::IsUnsignedInt($this->_limit)) {
             $this->query .= ' LIMIT ' . $this->_start . ', ' . ($this->_limit);
         }
-        $this->_values = Db::getInstance(_PS_USE_SQL_SLAVE_)->executeS($this->query);
+        $this->_values = Db::getInstance((bool) _PS_USE_SQL_SLAVE_)->executeS($this->query);
     }
 }
