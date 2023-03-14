@@ -2,7 +2,7 @@
 
 ## About
 
-Enrich your stats, add a list of the best suppliers to the dashboard.
+Enrich your stats: add a list of the best suppliers to your dashboard.
 
 ## Reporting issues
 
