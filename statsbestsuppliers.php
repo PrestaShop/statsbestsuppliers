@@ -41,7 +41,7 @@ class statsbestsuppliers extends ModuleGrid
     {
         $this->name = 'statsbestsuppliers';
         $this->tab = 'administration';
-        $this->version = '2.0.1';
+        $this->version = '2.0.2';
         $this->author = 'PrestaShop';
         $this->need_instance = 0;
 
@@ -74,7 +74,7 @@ class statsbestsuppliers extends ModuleGrid
         ];
 
         $this->displayName = $this->trans('Best suppliers', [], 'Modules.Statsbestsuppliers.Admin');
-        $this->description = $this->trans('Enrich your stats, add a list of the best suppliers to the dashboard.', [], 'Modules.Statsbestsuppliers.Admin');
+        $this->description = $this->trans('Enrich your stats: add a list of the best suppliers to your dashboard.', [], 'Modules.Statsbestsuppliers.Admin');
         $this->ps_versions_compliancy = ['min' => '1.7.1.0', 'max' => _PS_VERSION_];
     }
 
